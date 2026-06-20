@@ -61,3 +61,10 @@ index=windows EventCode=4625
 ## Disclaimer
 
 This is a fictional detection example created only for learning and portfolio purposes.
+
+## Lessons Learned
+
+While working through this detection scenario, I learned that failed login activity should always be reviewed in context. A single user generating failed logins is often normal behavior, but multiple users targeted from the same source within a short period can indicate password spraying or brute-force activity.
+
+Additional log sources such as VPN, firewall, and endpoint telemetry can help validate whether the activity is malicious or benign.
+
