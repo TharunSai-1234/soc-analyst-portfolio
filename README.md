@@ -35,3 +35,24 @@ Splunk · QRadar · ArcSight · CrowdStrike Falcon · Microsoft Defender · AWS 
 ## Disclaimer
 
 All examples in this repository use fictional or sanitized lab data. They do not represent work performed for any employer or client.
+## Featured Projects
+
+### 1. SIEM Detection Rule
+[Excessive Failed Logins Detection Rule](01-detection-rules/excessive-failed-logins.md)  
+Detects possible brute-force and password-spraying activity using failed-login patterns.
+
+### 2. Incident Response Playbook
+[Phishing Incident Response Playbook](02-incident-response-playbooks/phishing-incident-response.md)  
+Shows a SOC workflow for investigating, containing, and documenting phishing incidents.
+
+### 3. Threat Hunting Use Case
+[Suspicious PowerShell Threat Hunt](03-threat-hunting/suspicious-powershell-hunt.md)  
+Looks for suspicious PowerShell behavior such as encoded commands, downloads, and hidden execution.
+
+### 4. AWS Cloud Security Monitoring
+[AWS CloudTrail and GuardDuty Alert Use Case](04-cloud-security-monitoring/aws-cloudtrail-guardduty-alert.md)  
+Covers suspicious IAM changes, access-key creation, privilege escalation, and CloudTrail monitoring.
+
+### 5. Python Security Automation
+[Suspicious IP Checker Script](05-python-security-automation/suspicious-ip-checker.py)  
+A simple Python practice script that checks an IP address against a sample suspicious-IP list.
