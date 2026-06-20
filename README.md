@@ -1,58 +1,52 @@
 # SOC Analyst Portfolio
 
-> A hands-on cybersecurity portfolio focused on SOC operations, detection engineering, incident response, threat hunting, cloud security monitoring, and security automation.
+Hi, I'm Tharun.
 
-## Purpose
+This repository contains cybersecurity projects, investigation notes, detection ideas, and SOC-related lab work that I created while building hands-on experience in threat detection, incident response, threat hunting, and cloud security monitoring.
 
-This repository contains self-directed cybersecurity lab work and sanitized examples created for learning and portfolio purposes.
+Most of the content here is based on personal labs, research, and practice scenarios created for learning purposes.
 
-No employer, customer, confidential, personal, or production data is included.
+## Areas I'm Working On
 
-## Skills Demonstrated
+* Security Monitoring and Alert Triage
+* Threat Hunting
+* Incident Response
+* SIEM Use Cases
+* Cloud Security Monitoring
+* Phishing Analysis
+* Vulnerability Management
+* Python Security Automation
 
-- SIEM use-case development and alert tuning
-- Threat hunting using MITRE ATT&CK
-- Incident response workflows and playbooks
-- Phishing and email-threat analysis
-- AWS CloudTrail and GuardDuty monitoring concepts
-- Detection engineering and false-positive reduction
-- Python-based security automation
+## Projects
 
-## Portfolio Sections
+### Detection Rules
 
-| Folder | What It Shows |
-|---|---|
-| `01-detection-rules` | SIEM detection use cases and tuning ideas |
-| `02-incident-response-playbooks` | SOC incident response procedures |
-| `03-threat-hunting` | Threat-hunting hypotheses and investigation workflows |
-| `04-cloud-security-monitoring` | AWS and cloud security detection examples |
-| `05-python-security-automation` | Small Python scripts for SOC tasks |
+Created sample detection logic and investigation notes for common SOC scenarios such as failed login activity and suspicious authentication patterns.
 
-## Tools and Frameworks
+### Incident Response Playbooks
 
-Splunk · QRadar · ArcSight · CrowdStrike Falcon · Microsoft Defender · AWS GuardDuty · AWS CloudTrail · Qualys · Nessus · MITRE ATT&CK · Python
+Documented response procedures for phishing investigations and other common security events.
 
-## Disclaimer
+### Threat Hunting
 
-All examples in this repository use fictional or sanitized lab data. They do not represent work performed for any employer or client.
-## Featured Projects
+Built simple hunting scenarios focused on identifying suspicious PowerShell activity and attacker behavior.
 
-### 1. SIEM Detection Rule
-[Excessive Failed Logins Detection Rule](01-detection-rules/excessive-failed-logins.md)  
-Detects possible brute-force and password-spraying activity using failed-login patterns.
+### Cloud Security Monitoring
 
-### 2. Incident Response Playbook
-[Phishing Incident Response Playbook](02-incident-response-playbooks/phishing-incident-response.md)  
-Shows a SOC workflow for investigating, containing, and documenting phishing incidents.
+Practiced investigating AWS CloudTrail and GuardDuty events and documenting response actions.
 
-### 3. Threat Hunting Use Case
-[Suspicious PowerShell Threat Hunt](03-threat-hunting/suspicious-powershell-hunt.md)  
-Looks for suspicious PowerShell behavior such as encoded commands, downloads, and hidden execution.
+### Vulnerability Management
 
-### 4. AWS Cloud Security Monitoring
-[AWS CloudTrail and GuardDuty Alert Use Case](04-cloud-security-monitoring/aws-cloudtrail-guardduty-alert.md)  
-Covers suspicious IAM changes, access-key creation, privilege escalation, and CloudTrail monitoring.
+Created workflows for vulnerability triage, prioritization, remediation tracking, and validation.
 
-### 5. Python Security Automation
-[Suspicious IP Checker Script](05-python-security-automation/suspicious-ip-checker.py)  
-A simple Python practice script that checks an IP address against a sample suspicious-IP list.
+### Python Automation
+
+Built small Python scripts to automate simple security-related tasks.
+
+## Tools Used
+
+Splunk, QRadar, ArcSight, CrowdStrike Falcon, Microsoft Defender, AWS GuardDuty, AWS CloudTrail, Qualys, Nessus, Python, and MITRE ATT&CK.
+
+## Note
+
+All examples in this repository use lab data, fictional scenarios, or sanitized information. No employer, customer, or production data is included.
