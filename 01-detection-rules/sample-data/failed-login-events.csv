@@ -1,0 +1,12 @@
+timestamp,source_ip,username,event_id,status,notes
+2026-06-18 09:10:12,198.51.100.24,john.smith,4625,failed,Invalid password
+2026-06-18 09:10:31,198.51.100.24,finance.user,4625,failed,Invalid password
+2026-06-18 09:11:04,198.51.100.24,admin.support,4625,failed,Invalid password
+2026-06-18 09:11:42,198.51.100.24,hr.user,4625,failed,Invalid password
+2026-06-18 09:12:18,198.51.100.24,it.helpdesk,4625,failed,Invalid password
+2026-06-18 09:12:52,198.51.100.24,john.smith,4625,failed,Invalid password
+2026-06-18 09:13:20,198.51.100.24,finance.user,4625,failed,Invalid password
+2026-06-18 09:14:01,198.51.100.24,admin.support,4625,failed,Invalid password
+2026-06-18 09:14:48,198.51.100.24,hr.user,4625,failed,Invalid password
+2026-06-18 09:15:15,198.51.100.24,it.helpdesk,4625,failed,Invalid password
+2026-06-18 09:16:02,198.51.100.24,admin.support,4624,success,Successful login after repeated failures
