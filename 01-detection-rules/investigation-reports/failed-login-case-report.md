@@ -1,64 +1,31 @@
-# Failed Login Investigation Report
+# Failed Login Detection Case Study
 
-## Summary
+This folder contains a small SOC investigation case study based on repeated failed-login activity.
 
-I reviewed a small set of sample Windows login events after noticing repeated failed login attempts from the same IP address.
+I used this example to practice how I would review an authentication alert, identify suspicious patterns, and decide whether the activity should be escalated.
 
-The activity came from `198.51.100.24` and targeted multiple user accounts within a few minutes.
+## What is included
 
-## What I found
+* `excessive-failed-logins.md` — detection logic for repeated failed logins across multiple users
+* `failed-login-case-report.md` — investigation notes and recommended next actions
+* `sample-data/` — fictional sample events used for learning
 
-* 10 failed login attempts
-* 5 different user accounts targeted
-* Same source IP used for all failed attempts
-* One successful login occurred afterward for `admin.support`
+## Scenario
 
-The successful login after repeated failures is the main reason this activity would need further investigation.
+The case focuses on one source IP generating multiple failed login attempts against different user accounts within a short period.
 
-## Why this looked suspicious
+The main question is whether the activity is normal user behavior, a service-account issue, or possible password spraying.
 
-A normal user may enter the wrong password a few times. But in this case, the same IP tried several different accounts in a short time window.
+## What I would validate
 
-That pattern can match password spraying or brute-force behavior.
+* Whether the source IP is trusted
+* Whether any login succeeded after repeated failures
+* Whether privileged accounts were targeted
+* Whether the same IP appears in VPN, firewall, endpoint, or email logs
+* Whether MFA was enabled for affected accounts
 
-## Accounts involved
+## Takeaway
 
-* john.smith
-* finance.user
-* admin.support
-* hr.user
-* it.helpdesk
+Failed-login alerts need context. A few failures from one user may be normal, but repeated attempts against several accounts from one source need closer investigation.
 
-## Investigation steps I would take
-
-1. Check whether the source IP belongs to a company VPN, vendor, or known internal system.
-2. Review login activity for `admin.support` after the successful login.
-3. Check whether the account has admin privileges.
-4. Search the same IP in VPN, firewall, endpoint, and email logs.
-5. Check whether the targeted accounts had any password resets or suspicious activity afterward.
-6. Confirm whether MFA was enabled for the affected accounts.
-
-## Initial assessment
-
-Based on the sample data, I would classify this as a **medium-to-high priority investigation** because multiple accounts were targeted and one account later logged in successfully.
-
-## Recommended actions
-
-* Investigate the successful login for `admin.support`.
-* Block or challenge the source IP if it is not trusted.
-* Reset passwords if compromise is suspected.
-* Review MFA status for all targeted accounts.
-* Add detection tuning to identify similar patterns earlier.
-
-## MITRE ATT&CK Reference
-
-* T1110 – Brute Force
-* T1110.003 – Password Spraying
-
-## Learning Note
-
-This lab helped me understand why analysts should not close failed-login alerts too quickly. The number of failures matters, but the number of users targeted and whether a login later succeeds are also important.
-
-## Disclaimer
-
-This report uses fictional sample data for portfolio and learning purposes only.
+> All content in this folder uses fictional or sanitized learning data only.
